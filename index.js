@@ -7,7 +7,7 @@ let count =0
 
 http.createServer(function (req, res) {
     res.writeHead(200, {'Content-Type': 'text/plain'});
-    res.write(`all my Hello hhhh kkkk jjjj World   ! 
+    res.write(`all World   ! 
     ${count}
     ${new Date().toLocaleString("cn-CN", { timeZone: 'Asia/Shanghai' }) }
     `);
