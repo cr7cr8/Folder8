@@ -1,0 +1,18 @@
+<h1><%= Username %></h1>
+<h2>Port <%= Port %> Number visits <%= count %></h2>
+
+<h2><%=  new Date().toLocaleString("cn-CN", { timeZone: 'Asia/Shanghai' })%></h2>
+<h2>IP:   <%=Obj.ip %></h2>
+
+
+<h2>req.session</h2>
+<h3><%= JSON.stringify(Session,null, 4) %></h3>
+
+<h2>req.user</h2>
+<h3><%= JSON.stringify(Obj,null, 4) %></h3>
+
+
+
+<form action="/u/logout?_method=DELETE" method="POST">
+    <button type="submit">Log Out</button>
+  </form>

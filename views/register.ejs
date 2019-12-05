@@ -1,0 +1,18 @@
+<h1>Register</h1>
+<h3>Port <%= Port %> Number visits <%= count %></h3>
+<% if (messages.error) { %>
+  <%= messages.error %>
+<% } %>
+<form action="/u/register" method="POST">
+  <div>
+    <label for="username">Name</label>
+    <input type="text" id="username" name="username" required>
+  </div>
+ 
+  <div>
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" required>
+  </div>
+  <button type="submit">Register</button>
+</form>
+<a href="/u/login">Login</a>
