@@ -83,7 +83,7 @@ function verifyUserFunc(req, nameToVerify, passowrdToVerify, done) {
 function loginUserFunc() {
 
 
-    return passport.authenticate("local", { successRedirect: "/u", failureRedirect: "/u/login", failureFlash: true })
+    return passport.authenticate("local", { successRedirect: "/", failureRedirect: "/login", failureFlash: true })
 }
 
 
@@ -94,7 +94,7 @@ function registerUserFunc() {
 
 
    
-    return passport.authenticate("local", { successRedirect: "/u", failureRedirect: "/u/register", failureFlash: true })
+    return passport.authenticate("local", { successRedirect: "/", failureRedirect: "/register", failureFlash: true })
 
    
 }

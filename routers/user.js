@@ -36,16 +36,16 @@ router.get("/", checkAuthenticated,function (req, res) {
     }
 })
 
-router.delete("/logout", function (req, res) {  req.logOut();res.redirect("/u/login")})
+router.delete("/logout", function (req, res) {  req.logOut();res.redirect("/login")})
 
 
 
 function checkAuthenticated(req, res, next) {
-    req.isAuthenticated() ? next() : res.redirect("/u/login")
+    req.isAuthenticated() ? next() : res.redirect("/login")
 }
 
 function checkNotAuthenticated(req, res, next) {
-    req.isAuthenticated() ? res.redirect("/u") : next()
+    req.isAuthenticated() ? res.redirect("/") : next()
 }
 
 

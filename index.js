@@ -17,7 +17,7 @@ app.use(passport.session())
 
 
 const user = require("./routers/user")
-app.use("/u",user)
+app.use("/",user)
 
 
 
